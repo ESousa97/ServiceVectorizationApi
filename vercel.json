@@ -16,5 +16,10 @@
       "src": "/api/(.*)",
       "dest": "/api/app.py"
     }
-  ]
+  ],
+  "vercel-build": {
+    "commands": {
+      "build": "pip3.12 install distutils && pip3.12 install -r requirements.txt"
+    }
+  }
 }
