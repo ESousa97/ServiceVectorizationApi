@@ -19,7 +19,9 @@ def vectorize():
     for text in texts:
         if text.strip():  # Verifica se o texto não está vazio
             doc = nlp(text)
-            vectors.append(doc.vector)
+            vector = doc.vector
+            vectors.append(vector)
+            print(f"Texto: {text}, Vetor: {vector}")
     return jsonify([vector.tolist() for vector in vectors])  # Retorna vetores como lista para facilitar serialização
 
 if __name__ == '__main__':
