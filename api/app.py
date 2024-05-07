@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import spacy
+from werkzeug.urls import url_encode
 
 app = Flask(__name__)
 CORS(app, origins='*')
